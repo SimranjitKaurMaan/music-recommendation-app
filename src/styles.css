@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
+.App {
+  font-family: "Kalam", cursive;
+  text-align: center;
+}
+
+.btn-genre {
+  cursor: "pointer";
+  border: "1px";
+  padding: "0.5rem";
+  background-color: "#AA9FB1";
+}
