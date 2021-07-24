@@ -1,9 +1,18 @@
 import "./styles.css";
 import { useState } from "react";
 
-const instrumentalSongs = ["Songbird", "Silhouette"];
-const jazzSongs = ["Lullaby of Birdland", "Cry Me A River"];
-const rockSongs = ["Walk This Way", "Start Me Up"];
+const instrumentalSongs = [
+  { name: "Songbird", rating: "3.5/5" },
+  { name: "Silhouette", rating: "3/5" }
+];
+const jazzSongs = [
+  { name: "Lullaby of Birdland", rating: "4/5" },
+  { name: "Cry Me A River", rating: "3/5" }
+];
+const rockSongs = [
+  { name: "Walk This Way", rating: "4.5/5" },
+  { name: "Start Me Up", rating: "5/5" }
+];
 
 export default function App() {
   const [songsToRender, setSongsToRender] = useState([]);
@@ -26,10 +35,9 @@ export default function App() {
         <span
           style={{
             cursor: "pointer",
-            border: "1px",
             padding: "0.5rem",
             borderRadius: "0.5rem",
-            backgroundColor: "#8093F1"
+            backgroundColor: "#9BD1FE"
           }}
           onClick={clickHandler}
         >
@@ -38,10 +46,9 @@ export default function App() {
         <span
           style={{
             cursor: "pointer",
-            border: "1px",
             padding: "0.5rem",
             borderRadius: "0.5rem",
-            backgroundColor: "#8093F1"
+            backgroundColor: "#9BD1FE"
           }}
           onClick={clickHandler}
         >
@@ -50,32 +57,38 @@ export default function App() {
         <span
           style={{
             cursor: "pointer",
-            border: "1px",
             padding: "0.5rem",
             borderRadius: "0.5rem",
-            backgroundColor: "#8093F1"
+            backgroundColor: "#9BD1FE"
           }}
           onClick={clickHandler}
         >
           Rock
         </span>
       </ul>
-      <hr />
+      <hr style={{ width: "40%" }} />
       <ul style={{ listStyle: "none" }}>
         {songsToRender.map((song) => (
           <li
             style={{
-              fontSize: "1rem",
-              padding: "0.5rem",
+              fontSize: "1.5rem",
+              padding: "1rem",
               cursor: "pointer",
-              borderRadius: "0.5rem",
+              border: "1px solid",
+              borderRadius: "1rem",
               margin: "0.5rem auto",
-              backgroundColor: "#8093F1",
-              width: "20%"
+              textAlign: "left",
+              backgroundColor: "#9BD1FE",
+              width: "50%",
+              height: "8vh"
             }}
             key={song}
           >
-            {song}
+            <div>{song.name}</div>
+            <small style={{ fontSize: "1rem" }}>
+              {"Rating: "}
+              {song.rating}
+            </small>
           </li>
         ))}
       </ul>

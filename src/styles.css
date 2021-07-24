@@ -4,9 +4,14 @@
   text-align: center;
 }
 
-.btn-genre {
+body {
+  background-color: #ccecfe;
+  margin: "0px";
+}
+
+.App .btn-genre {
   cursor: "pointer";
-  border: "1px";
   padding: "0.5rem";
-  background-color: "#AA9FB1";
+  border-radius: "0.5rem";
+  background-color: "#9BD1FE";
 }
