@@ -75,12 +75,11 @@ export default function App() {
               padding: "1rem",
               cursor: "pointer",
               border: "1px solid",
-              borderRadius: "1rem",
+              borderRadius: "0.5rem",
               margin: "0.5rem auto",
               textAlign: "left",
               backgroundColor: "#9BD1FE",
-              width: "40%",
-              height: "20%"
+              width: "40%"
             }}
             key={song}
           >
