@@ -79,8 +79,8 @@ export default function App() {
               margin: "0.5rem auto",
               textAlign: "left",
               backgroundColor: "#9BD1FE",
-              width: "50%",
-              height: "8vh"
+              width: "40%",
+              height: "20%"
             }}
             key={song}
           >
